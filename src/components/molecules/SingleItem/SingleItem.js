@@ -1,11 +1,12 @@
-import { View, Text } from 'react-native';
+import { TouchableOpacity, Text, Image } from 'react-native';
 
 import { styles } from './SingleItem.styles.js';
-const SingleItem = ({ text, itemStyle }) => {
+const SingleItem = ({ text, image, itemStyle, imageStyle, onPress }) => {
   return (
-    <View style={styles[itemStyle]}>
+    <TouchableOpacity style={styles[itemStyle]} onPress={onPress}>
+      {image && <Image source={{ uri: image }} style={styles[imageStyle]} />}
       <Text style={styles[`${itemStyle}Text`]}>{text}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 export default SingleItem;

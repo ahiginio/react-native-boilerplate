@@ -4,10 +4,11 @@ import colors from './constants/colors.js';
 export const GeneralStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.white,
+    backgroundColor: colors.background,
     color: colors.dark,
     marginHorizontal: 16,
     fontFamily: 'RalewayRegular',
+    paddingTop: 20,
   },
   fs14: {
     fontSize: 14,
@@ -16,6 +17,11 @@ export const GeneralStyles = StyleSheet.create({
   },
   fs16: {
     fontSize: 16,
+    color: colors.dark,
+    fontFamily: 'RalewayRegular',
+  },
+  fs20: {
+    fontSize: 20,
     color: colors.dark,
     fontFamily: 'RalewayRegular',
   },

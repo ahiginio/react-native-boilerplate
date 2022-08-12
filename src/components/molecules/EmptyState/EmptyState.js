@@ -8,7 +8,7 @@ const EmptyState = ({ text, icon }) => {
   return (
     <View style={styles.container}>
       {icon}
-      <Text style={[fs14, textCenter, { color: colors.gray }]}>{text}</Text>
+      <Text style={[fs14, textCenter, { color: colors.darkGray, paddingTop: 8 }]}>{text}</Text>
     </View>
   );
 };

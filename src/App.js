@@ -1,10 +1,9 @@
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Provider } from 'react-redux';
 
 import MainNavigator from './navigation/MainNavigator.js';
-import Home from './screens/Home/Home.js';
-import { GeneralStyles } from './styles.js';
+import store from './store';
 
 export default function App() {
   const [loaded] = useFonts({
@@ -18,5 +17,9 @@ export default function App() {
     RalewayExtraBold: require('../assets/fonts/Raleway-ExtraBold.ttf'),
   });
   if (!loaded) return <AppLoading />;
-  return <MainNavigator />;
+  return (
+    <Provider store={store}>
+      <MainNavigator />
+    </Provider>
+  );
 }
