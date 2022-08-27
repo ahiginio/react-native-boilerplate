@@ -1,8 +1,9 @@
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Provider } from 'react-redux';
 
-import MainNavigator from './navigation/MainNavigator.js';
+import MainNavigator from './navigation/index.js';
 import store from './store';
 
 export default function App() {
@@ -18,8 +19,10 @@ export default function App() {
   });
   if (!loaded) return <AppLoading />;
   return (
-    <Provider store={store}>
-      <MainNavigator />
-    </Provider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Provider store={store}>
+        <MainNavigator />
+      </Provider>
+    </GestureHandlerRootView>
   );
 }

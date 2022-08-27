@@ -1,7 +1,7 @@
 import { View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 
-import * as MainNavigation from '../../../navigation/MainNavigator';
+import * as MainNavigation from '../../../navigation';
 import { selectCategory } from '../../../store/actions/category.actions';
 import { GeneralStyles } from '../../../styles';
 import { CustomTitle } from '../../atoms';

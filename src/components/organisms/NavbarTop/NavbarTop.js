@@ -2,7 +2,7 @@ import { View } from 'react-native';
 
 import { BackArrowIcon } from '../../../../assets/icons';
 import colors from '../../../constants/colors';
-import { goBack } from '../../../navigation/MainNavigator';
+import { goBack } from '../../../navigation';
 import { GeneralStyles } from '../../../styles';
 import { CustomIcon, CustomText } from '../../atoms';
 export default function NavbarTop({ title }) {

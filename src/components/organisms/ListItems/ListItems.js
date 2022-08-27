@@ -5,12 +5,7 @@ import { CustomTitle } from '../../atoms';
 import { SingleItem, EmptyState } from '../../molecules';
 const { fs24, textBold, textCenter } = GeneralStyles;
 
-const renderItem = ({ item }) => (
-  <SingleItem text={item.name} itemStyle="primary" itemImage="primary" />
-);
-
-const ListItems = ({ items, title, containerStyle, emptyStateText }) => {
-  console.log(items);
+const ListItems = ({ items, title, containerStyle, emptyStateText, renderItem }) => {
   return (
     <View style={containerStyle}>
       <CustomTitle text={title} titleStyle={[fs24, textBold, textCenter, { marginBottom: 20 }]} />

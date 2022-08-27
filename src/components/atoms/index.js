@@ -7,3 +7,4 @@ export { default as CustomTitle } from './Title/Title';
 export { default as CustomIcon } from './Icon/Icon';
 export { default as CustomImage } from './Image/Image';
 export { default as CustomText } from './Text/Text';
+export { default as Separator } from './Separator/Separator';

@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 
 import { ChevronDownMediumIcon } from '../../../../assets/icons';
 import locationIcon from '../../../../assets/images/location.png';
@@ -9,11 +9,11 @@ import { styles } from './AddressPicker.styles';
 const { fs16, textBold } = GeneralStyles;
 const AddressPicker = ({ address, onPress }) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <CustomImage icon={locationIcon} imageStyle={styles.iconStyle} />
       <CustomText text={address} textStyle={[fs16, textBold]} />
       <CustomIcon icon={<ChevronDownMediumIcon color={colors.dark} />} />
-    </View>
+    </TouchableOpacity>
   );
 };
 export default AddressPicker;

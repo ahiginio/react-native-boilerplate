@@ -1,3 +1,4 @@
+import * as Device from 'expo-device';
 import { Dimensions, Platform } from 'react-native';
 
 const viewportWidth = Dimensions.get('window').width;
@@ -8,5 +9,14 @@ const isTablet = () => {
 const isAndroid = () => {
   return Platform.OS === 'android';
 };
-
-export { isTablet, isAndroid, viewportHeight, viewportWidth };
+const isIphoneX = () => {
+  if (
+    (Platform.OS == 'ios' && Device.modelName.toLowerCase().includes('iphone x')) ||
+    Device.modelName.toLowerCase().includes('iphone 1')
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+export { isTablet, isAndroid, isIphoneX, viewportHeight, viewportWidth };
